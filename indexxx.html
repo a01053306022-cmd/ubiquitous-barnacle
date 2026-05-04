@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 멋진 포트폴리오</title>
+    <!-- 구글 폰트 적용 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS 스타일링 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f7f6;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        /* 메인 배너 */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* 섹션 공통 스타일 */
+        section {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: #2c3e50;
+        }
+
+        /* 그리드 레이아웃 (카드형태) */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* 푸터 */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        /* 버튼 스타일 */
+        .btn {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero" id="home">
+        <h1>안녕하세요, 이채영입니다</h1>
+        <p>열정적인 웹 개발자의 포트폴리오에 오신 것을 환영합니다.</p>
+        <a href="#projects" class="btn">내 작업 보기</a>
+    </div>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p style="text-align: center; font-size: 1.1rem;">
+            저는 깨끗하고 효율적인 코드를 작성하는 것을 좋아하는 개발자입니다.<br>
+            HTML, CSS, JavaScript를 주로 사용하며 사용자 경험을 중요하게 생각합니다.
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>멋진 웹사이트</h3>
+                <p>반응형 디자인을 적용한 기업형 웹사이트 제작 프로젝트입니다.</p>
+            </div>
+            <div class="card">
+                <h3>To-Do 리스트</h3>
+                <p>자바스크립트로 만든 일정 관리 애플리케이션입니다.</p>
+            </div>
+            <div class="card">
+                <h3>날씨 앱</h3>
+                <p>API를 활용하여 전 세계 날씨 정보를 실시간으로 보여줍니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="text-align: center;">
+        <h2>Contact</h2>
+        <p>함께 일하고 싶으신가요? 언제든 연락주세요!</p>
+        <p style="margin-top: 20px; font-weight: bold;">Email: example@email.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <!-- 부드러운 스크롤 효과를 위한 간단한 JS -->
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
