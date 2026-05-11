@@ -1,4 +1,4 @@
-<img width="1297" height="46" alt="image" src="https://github.com/user-attachments/assets/ba181ada-b47a-4092-a0b1-630f6f5f2ed2" />경영정보처리론 실습과제2: 공공데이터 시각화 대시보드 만들기
+경영정보처리론 실습과제2: 공공데이터 시각화 대시보드 만들기
 2514529 이채영
 
 1) 사용한 프롬프트 링크 공유
