@@ -1,0 +1,3 @@
+GEMINI_API_KEY = AIzaSyCkoBvabhQEkMLudgSd4Y5j_4luHYL2P4o
+SUPABASE_URL = https://qzqotedfiwjhspxonzqt.supabase.co
+SUPABASE_KEY = sb_publishable_mJengHHSlmV04VRzPsvPXw_vNGCwNjl
